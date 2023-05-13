@@ -1,0 +1,25 @@
+{
+  "name": "ner-ml",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kevin-luvian/ner-ml.git",
+  "author": "kevinlh90@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./index.js",
+    "lint": "./node_modules/.bin/eslint . --fix"
+  },
+  "dependencies": {
+    "@babel/eslint-parser": "^7.21.8",
+    "eslint": "^8.40.0",
+    "esprima": "^4.0.1",
+    "fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "path": "^0.12.7",
+    "playwright-core": "^1.33.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {}
+}

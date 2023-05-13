@@ -1,0 +1,44 @@
+[app]
+ENV = development
+CORS = .*
+OS = mac
+JWTSecret = <redacted>
+
+LogSavePath = logs/
+LogSaveName = log-
+LogFileExt = log
+TimeFormat = 2006-01-02
+
+[google-oauth]
+ClientID = <redacted>
+SecretID = <redacted>
+RedirectURL = <redacted>
+
+[consul]
+Address = host.docker.internal:8500
+ServiceName = auth_service
+RootFolder = auth_service
+HealthTTL = 60
+WatchTTL = 10
+
+[server]
+#debug or release
+RunMode = debug
+HttpPort = 8000
+ReadTimeout = 60
+WriteTimeout = 60
+
+[redis]
+Host = goauth-redis:6379
+Password = redispassword
+MaxIdle = 30
+MaxActive = 30
+IdleTimeout = 200
+
+[database]
+Type = mysql
+User = root
+Password = rootroot
+Host = 127.0.0.1:3306
+Name = blog
+TablePrefix = blog_

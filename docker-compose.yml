@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    container_name: pyt
+    build: ./jupyter
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./pyt:/app
+  jupyter:
+    container_name: jupy
+    image: jupyter/datascience-notebook
+    ports:
+      - "5001:8888"
+    volumes:
+      - ./jupyter:/home/jovyan/work
